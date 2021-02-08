@@ -1,4 +1,4 @@
-# Using Python to Interact with the Operating System | Week - 2
+# Using Python to Interact with the Operating System | Week - 3
 * Define what a regular expression is and why they’re useful
 * Utilize basic regular expression examples like simple matching or wildcard and character classes
 * Understand repetition qualifiers in detail
