@@ -5,6 +5,8 @@ This new beginner-level, six-course certificate, developed by Google, is designe
 | --- | --- |
 | `Crash Course on Python` | This course is designed to teach you the foundations in order to write simple programs in Python using the most common structures.|
 | `Using Python to Interact with the Operating System` | By the end of this course, you’ll be able to manipulate files and processes on your computer’s operating system.|
+| `Introduction to Git and GitHub` | You’ll learn how to keep track of the different versions of your code and configuration files using Git.|
+
 
 
 
