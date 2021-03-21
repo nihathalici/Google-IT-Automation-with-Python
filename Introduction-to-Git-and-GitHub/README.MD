@@ -6,7 +6,7 @@ Solutions for the Quizzes on GitHub
 ========================================================
 - https://github.com/PaareshC/Introduction-to-Git-and-GitHub-by-Google-Coursera
 
-Youube 
+YouTube 
 ========================================================
 - https://www.youtube.com/watch?v=SWYqp7iY_Tc
 
