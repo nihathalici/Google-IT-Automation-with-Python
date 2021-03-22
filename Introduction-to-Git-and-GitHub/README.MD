@@ -8,7 +8,8 @@ Solutions for the Quizzes on GitHub
 
 YouTube 
 ========================================================
-- https://www.youtube.com/watch?v=SWYqp7iY_Tc
+- 32 min Git & GitHub Crash Course For Beginners by Brad Traversy:
+ https://www.youtube.com/watch?v=SWYqp7iY_Tc
 
 Links and Appendix
 ========================================================
