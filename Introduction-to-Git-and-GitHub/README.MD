@@ -11,10 +11,10 @@ YouTube
 - Git & GitHub Crash Course For Beginners by Brad Traversy (32 min):
  https://www.youtube.com/watch?v=SWYqp7iY_Tc
 
-- Git Intro - Part I by David Mahler (28 min):
+- Git Intro - Part 1 by David Mahler (28 min):
 https://www.youtube.com/watch?v=uR6G2v_WsRA
 
-- Git Intro - Part I by David Mahler (28 min):
+- Git Intro - Part 2 by David Mahler (28 min):
 https://www.youtube.com/watch?v=FyAAIHHClqI
 
 - Git Intro - Part 3 by David Mahler (31 min): 
