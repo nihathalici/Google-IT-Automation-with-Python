@@ -1,6 +1,12 @@
 
 # Introduction to Git and GitHub | Week-4
 
+* Understand how to create, update, and execute pull requests on GitHub
+* Understand what a code review is and be able to utilize the code review workflow
+* Explore how to use code reviews in GitHub
+* Understand the importance of managing projects and accepting or rejecting changes
+* Utilize issue trackers
+* Understand the methodology behind continuous integration
 
 Solutions for the Quizzes on GitHub 
 ========================================================
