@@ -8,6 +8,9 @@ Solutions for the Quizzes on GitHub
 
 YouTube 
 ========================================================
+
+Excellent Introduction to Git and GitHub with Examples: 
+
 - Git & GitHub Crash Course For Beginners by Brad Traversy (32 min):
  https://www.youtube.com/watch?v=SWYqp7iY_Tc
 
