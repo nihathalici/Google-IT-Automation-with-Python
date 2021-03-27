@@ -1,6 +1,12 @@
 
 # Introduction to Git and GitHub | Week-3
 
+* Understand what GitHub is and how to interact with it
+* Understand what a remote repository is
+* Utilize remote repositories, fetch new changes, and update local repositories
+* Tackle conflicts by utilizing the pull-merge-push workflow
+* Push remote branches and understand the advantages of using separate branches
+* Understand what rebasing is and utilize the git rebase command
 
 Solutions for the Quizzes on GitHub 
 ========================================================
