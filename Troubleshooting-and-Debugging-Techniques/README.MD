@@ -1,6 +1,10 @@
 # Troubleshooting and Debugging Techniques
 In this course, we'll give you the tools to quickly identify and solve real-world problems that you might come across in your IT role. We'll look at a bunch of different strategies and approaches for tackling the most common pitfalls of your code and IT infrastructure. You'll learn strategies for approaching almost any technical problem and then see how those apply to solving different real-world scenarios. 
 
+Solutions for the Quizzes on GitHub 
+========================================================
+- https://github.com/sambhipiyush/Troubleshooting-and-Debugging-Techniques-Google
+
 Links and Appendix
 ========================================================
 Offered by Google
