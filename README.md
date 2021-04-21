@@ -7,6 +7,7 @@ This new beginner-level, six-course certificate, developed by Google, is designe
 | `Using Python to Interact with the Operating System` | By the end of this course, you’ll be able to manipulate files and processes on your computer’s operating system.|
 | `Introduction to Git and GitHub` | You’ll learn how to keep track of the different versions of your code and configuration files using the version control system Git.|
 | `Troubleshooting and Debugging Techniques` | You’ll learn how to quickly identify and solve real-world problems that you might come across in your IT role. |
+| `Configuration Management and the Cloud` | In this course, you’ll learn how to apply automation to manage fleets of computers. |
 
 Links and Appendix
 ========================================================
