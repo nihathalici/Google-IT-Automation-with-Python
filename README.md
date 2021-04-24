@@ -9,9 +9,12 @@ This new beginner-level, six-course certificate, developed by Google, is designe
 | `Troubleshooting and Debugging Techniques` | You’ll learn how to quickly identify and solve real-world problems that you might come across in your IT role. |
 | `Configuration Management and the Cloud` | In this course, you’ll learn how to apply automation to manage fleets of computers. |
 | `Automating Real-World Tasks with Python` | You'll tackle real-world scenarios in Qwiklabs that will challenge you to use multiple skills at once. |
+
+
 Links and Appendix
 ========================================================
 Offered by Google
+
 
 - Coursera: https://www.coursera.org/home
 - Google IT Automation with Python Specialization: https://www.coursera.org/professional-certificates/google-it-automation
