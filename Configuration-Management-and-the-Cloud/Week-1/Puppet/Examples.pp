@@ -7,3 +7,10 @@ class sudo {
     ensure => present,
   }
 }
+
+class sysctl {
+  # Make sure the directory exists
+  file { '/etc/sysctl.d':
+    ensure => directory,
+  } 
+}
