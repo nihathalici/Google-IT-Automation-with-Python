@@ -1,5 +1,12 @@
 # Configuration Management and the Cloud | Week-2
 
+* Deploy and run Puppet locally
+* Create, modify, and update Puppet rules
+* Understand the concepts of public key infrastructure and secure socket layer
+* Understand the difference between production and testing environments
+* Explore how canaries and development environments are helpful when deploying changes
+* Understand the benefits of multiple environments
+
 
 Solutions for the Quizzes on GitHub 
 ========================================================
