@@ -48,3 +48,38 @@ class ntp {
     ensure => running,
   }
 }
+
+
+# This piece of code is using the is-virtual fact
+# together with a conditional statement to decide
+# whether the smartmontools package should be installed or purged.
+
+
+if $facts['is_virtual'] {
+  package { 'smartmontools':
+    ensure => purged,
+
+  }
+} else {
+  package { 'smartmontools':
+    ensure => installed,
+  }
+}
+
+
+# This resource ensures that the /etc/issue file
+# has a set of permissions and a specific line in it.
+
+file { '/etc/issue':
+  mode    => '0644',
+  content => "Internal system \l \n",
+}
+
+
+# Using the onlyif attribute, we specified that this command
+# should be executed only if the file that we want to move exists.
+
+exec { 'move example file':
+  command => 'mv /home/user/example.txt /home/user/Desktop',
+  onlyif  => 'test -e /home/user/example.txt',
+}
