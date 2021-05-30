@@ -156,3 +156,28 @@ os.rename("first_draft.txt", "finished_masterpiece.txt")
 
 # We can use OS path sub-module exists function to check whether a file exist. 
 os.path.exists("finished_masterpiece.txt")
+
+############################
+# More File Information    #
+############################
+
+'''
+We can get a lot more info about our files using functions in OS.path module. 
+For example, to check how big a file is, we can use the getsize function which returns the file size in bytes.
+'''
+os.path.getsize("spider.txt")
+
+# To check when the file was last modified, the getmtime function comes in really handy.
+os.path.getmtime("spider.txt")
+
+
+'''
+Here, we're using the fromtimestamp method of the datetime class inside the datetime module. 
+It makes the date far easier for us to understand.
+'''
+import datetime
+timestamp = os.path.getmtime("spider.txt")
+datetime.datetime.fromtimestamp(timestamp)
+
+# The abspath function takes a filename and turns it into an absolute path. 
+os.path.abspath("spider.txt")
