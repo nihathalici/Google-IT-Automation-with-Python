@@ -181,3 +181,40 @@ datetime.datetime.fromtimestamp(timestamp)
 
 # The abspath function takes a filename and turns it into an absolute path. 
 os.path.abspath("spider.txt")
+
+#########################
+# Directories           #
+#########################
+
+# To check which current directory your Python program is executing in, you can use the getcwd method.
+import os
+print(os.getcwd())
+
+# To create a directory, we use the mkdir function.
+os.mkdir("new_dir")
+
+# You can also change directories in your program by using the chdir function 
+# and passing the directory you'd like to change to as a parameter.
+os.chdir("new_dir")
+
+# We can use rmdir to remove a directory
+os.rmdir("newer_dir")
+
+# The os.listdir function returns a list of all the files and sub-directories in a given directory.
+os.listdir("website")
+
+
+# If we want to know whether one of these files is a directory, 
+# we need to use os.path.join to create the full path.
+
+dir = "my_directory"
+
+for name in os.listdir(dir):
+    fullname = os.path.join(dir, name)
+    if os.path.isdir(fullname):
+        print("{} is a directory".format(fullname))
+    else:
+        print("{} is a file".format(fullname))
+
+# In Linux and MacOS, the portions of a file are split using a forward slash(/)
+# On Windows, they're split using a backslash (\)
