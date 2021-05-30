@@ -218,3 +218,23 @@ for name in os.listdir(dir):
 
 # In Linux and MacOS, the portions of a file are split using a forward slash(/)
 # On Windows, they're split using a backslash (\)
+
+#########################
+# Reading CSV Files     #
+#########################
+
+'''
+Python standard library includes a module which lets us read, create and manipulate CSV files: CSV
+Before we can parse a CSV file, we need to open the file the same way as before.
+That has given us an instance of the CSV reader class. 
+We can now iterate through its contents and access information that it parsed.
+
+import csv
+f = open("csv_file.txt")
+csv_f = csv.reader(f)
+for row in csv_f:
+    name, phone, role = row
+    print("Name: {}, Phone: {}, Role: {}".format(name, phone, role))
+f.close()
+
+
