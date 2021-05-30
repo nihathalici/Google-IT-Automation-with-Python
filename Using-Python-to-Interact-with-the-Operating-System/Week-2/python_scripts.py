@@ -136,5 +136,23 @@ with open("guests.txt","r") as guests:
 # We can see that Bob is checked in while Andrea is not. Nice work! You've learned the basics of reading and writing files in Python!
 
 
+############################
+# Working with Files       #
+############################
+
+'''
+We first import the OS module. Then we call the remove function the OS module gives us 
+and pass the string novel.txt which is the file we created earlier. The file has now been deleted.
+'''
+import os
+os.remove("novel.txt")
 
 
+'''
+We can easily rename a file with the rename function. The first parameter to rename function 
+is the old name of the file and the second is new name. 
+'''
+os.rename("first_draft.txt", "finished_masterpiece.txt")
+
+# We can use OS path sub-module exists function to check whether a file exist. 
+os.path.exists("finished_masterpiece.txt")
