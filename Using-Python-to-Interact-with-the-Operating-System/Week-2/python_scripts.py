@@ -238,3 +238,36 @@ for row in csv_f:
 f.close()
 
 
+#########################
+# Generating CSV        #
+#########################
+
+"""
+Open the file in write mode. We'll use the with block that we saw before
+Now that we have the file opened for writing, let's call the writer function of the CSV module with this file as a parameter.
+The writer variable is now an instance of a CSV writer class. 
+There are two functions that we can use: writerow, which we'll write one row at a time; and writerows, which we'll write all of them together.
+"""
+
+import csv
+hosts = [["workstation.local", "192.168.25.46"], ["webserver.cloud", "10.2.5.6"]]
+
+with open('hosts.csv', 'w') as hosts_csv:
+    writer = csv.writer(hosts_csv)
+    writer.writerows(hosts)
+
+################################
+# Reading and Writing          #
+# CSV Files with Dictionaries  #
+################################
+
+"""
+We can profit from this additional information by using DictReader, a slightly different reader that's also provided by the CSV module. 
+This reader turns each row of the data in a CSV file into a dictionary. 
+We can then access the data by using the column names instead of the position in the row.
+"""
+import csv
+with open('software.csv') as software:
+    reader = csv.DictReader(software)
+    for row in reader:
+        print(("{} has {} users").format(row["name"], row["users"]))
