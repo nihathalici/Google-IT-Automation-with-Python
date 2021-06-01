@@ -82,4 +82,33 @@ import yaml
 
 with open('people.yaml', 'w') as people_yaml:
     yaml.safe_dump(people, people_yaml)
+
+#################################
+# More About JSON               #
+#################################
+
+"""
+The json library will help us turn Python objects into JSON, and turn JSON strings into Python objects! 
+The dump() method serializes basic Python objects, writing them to a file. Like in this example:  
+"""
+import json
+with open('people.json', 'w') as people_json:
+    json.dump(people, people_json)
  
+"""
+JSON doesn't need to contain multiple lines, but it sure can be hard to read the result if it's formatted this way! 
+Let's use the indent parameter for json.dump() to make it a bit easier to read.  
+"""
+with open('people.json', 'w') as people_json:
+    json.dump(people, people_json, indent=2)
+
+    
+# Another option is to use the dumps() method, which also serializes Python objects, but returns a string instead of writing directly to a file.  
+people_json = json.dumps(people)
+
+"""
+The load() method does the inverse of the dump() method. It deserializes JSON from a file into basic Python objects. 
+The loads() method also deserializes JSON into basic Python objects, but parses a string instead of a file.  
+"""
+with open('people.json', 'r') as people_json:
+    people = json.load(people_json)
