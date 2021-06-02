@@ -112,3 +112,36 @@ The loads() method also deserializes JSON into basic Python objects, but parses 
 """
 with open('people.json', 'r') as people_json:
     people = json.load(people_json)
+
+    
+#################################
+# The Python Requests Library   #
+#################################
+
+"""
+The Python Requests library makes it super easy to write programs that send and receive HTTP. 
+Instead of having to understand the HTTP protocol in great detail, you can just make very simple HTTP connections 
+using Python objects, and then send and receive messages using the methods of those objects.
+"""
+import requests
+response = requests.get('https://www.google.com')
+
+# Alright, now what did the web server respond with? Let's take a look at the first 300 characters of the Response.text:
+print(response.text[:300])
+
+"""
+We didn't have to write any code to find the web server, make a network connection, construct an HTTP message, 
+wait for a response, or decode the response. Not that HTML can't be messy enough on its own, 
+but let's look at the first bytes of the raw message that we received from the server:
+"""
+response = requests.get('https://www.google.com', stream=True)
+print(response.raw.read()[:100])
+
+"""
+The requests.Response object also contains the exact request that was created for us. 
+We can check out the headers stored in our object to see that the Requests module told the web server that it was okay to compress the content: 
+"""
+response.request.headers['Accept-Encoding']
+
+# And then the server told us that the content had actually been compressed.  
+response.headers['Content-Encoding']
