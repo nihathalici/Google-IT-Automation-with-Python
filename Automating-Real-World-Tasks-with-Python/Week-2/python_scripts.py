@@ -145,3 +145,31 @@ response.request.headers['Accept-Encoding']
 
 # And then the server told us that the content had actually been compressed.  
 response.headers['Content-Encoding']
+
+###########################################
+# Useful Operations for Python Requests   #
+###########################################
+
+"""
+How do we know if a request we made got a successful response? 
+You can check out the value of Response.ok, which will be True if the response was good, and False if it wasn't.  
+"""
+response.ok
+
+# If the boolean isn’t specific enough for your needs, you can get the HTTP response code that was returned by looking at Response.status_code:  
+response.status_code
+
+"""
+To write maintainable, stable code, you’ll always want to check your responses to make sure they succeeded 
+before trying to process them further. For example, you could do something like this:  
+"""
+response = requests.get(url)
+if not response.ok:
+    raise Exception("GET failed with status code {}".format(response.status_code))
+    
+"""
+But you don't really need to do that. Requests has us covered here, too! 
+We can use the Response.raise_for_status() method, which will raise an HTTPError exception only if the response wasn’t successful.  
+"""
+response = requests.get(url)
+response.raise_for_status()
