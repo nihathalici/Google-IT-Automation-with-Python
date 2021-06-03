@@ -173,3 +173,32 @@ We can use the Response.raise_for_status() method, which will raise an HTTPError
 """
 response = requests.get(url)
 response.raise_for_status()
+
+###############################
+# HTTP GET and POST Methods   #
+###############################
+
+# With requests.get(), you can provide a dictionary of parameters, and the Requests module will construct the correct URL for you!  
+import requests
+p = {"search": "grey kitten","max_results": 15}
+response = requests.get("https://example.com/path/to/api", params=p)
+response.request.url
+
+"""
+A POST request looks very similar to a GET request. Instead of setting the params attribute, 
+which gets turned into a query string and appended to the URL, we use the data attribute, 
+which contains the data that will be sent as part of the POST request. 
+"""
+p = {"description":"white kitten", "name":"Snowball", "age_months": 6}
+response = requests.post("https://example.com/path/to/api", data=p)
+
+"""
+So, if we need to send and receive data from a web service, we can turn our data 
+into dictionaries and then pass that as the data attribute of a POST request.
+
+Today, it's super common to send and receive data specifically in JSON format, 
+so the Requests module can do the conversion directly for us, using the json parameter.
+"""
+response = requests.post("https://example.com/path/to/api", json=p)
+response.request.url
+response.request.body
