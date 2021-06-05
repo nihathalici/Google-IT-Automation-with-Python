@@ -138,3 +138,30 @@ able to receive the message. Our message was delivered successfully, so send_mes
 Finally, now that the email is sent, let's close the connection to the mail server.
 """
 mail_server.quit()
+
+#####################################
+# Introduction to Generating PDFs   #
+#####################################
+
+"""
+There's a few tools in Python that let you generate PDFs with the content that you want. Here, we'll learn about one of them: ReportLab. 
+ReportLab has a lot of different features for creating PDF documents. We'll cover just the basics here, and give you pointers for more information at the end.
+
+For our examples, we'll be mostly using the high-level classes and methods in the Page Layout and Typography Using Scripts (PLATYPUS) part of the ReportLab module.
+
+Let's say that I have an awesome collection of fruit, and I want to create a PDF report of all the different kinds of fruit I have! 
+I can easily represent the different kinds of fruit and how much of each I have with a Python dictionary. It might look something like this:
+"""
+fruit = {
+  "elderberries": 1,
+  "figs": 1,
+  "apples": 2,
+  "durians": 3,
+  "bananas": 5,
+  "cherries": 8,
+  "grapes": 13
+}
+
+# Now let's take this information and turn it into a report that we can show off! We're going to use the SimpleDocTemplate class to build our PDF. 
+from reportlab.platypus import SimpleDocTemplate
+report = SimpleDocTemplate("/tmp/report.pdf")
