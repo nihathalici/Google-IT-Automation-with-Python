@@ -165,3 +165,30 @@ fruit = {
 # Now let's take this information and turn it into a report that we can show off! We're going to use the SimpleDocTemplate class to build our PDF. 
 from reportlab.platypus import SimpleDocTemplate
 report = SimpleDocTemplate("/tmp/report.pdf")
+
+"""
+The report object that we just created will end up generating a PDF using the filename /tmp/report.pdf. Now, let's add some content to it! 
+We'll create a title, some text in paragraphs, and some charts and images. For that, we're going to use what reportlab calls Flowables. 
+Flowables are sort of like chunks of a document that reportlab can arrange to make a complete report. Let's import some Flowable classes.
+"""
+from reportlab.platypus import Paragraph, Spacer, Table, Image
+
+"""
+Each of these items (Paragraph, Spacer, Table, and Image) are classes that build individual elements in the final document. We have to tell reportlab 
+what style we want each part of the document to have, so let's import some more things from the module to describe style.
+"""
+from reportlab.lib.styles import getSampleStyleSheet
+styles = getSampleStyleSheet()
+
+"""
+You can make a style all of your own, but we’ll use the default provided by the module for these examples. The styles object now contains a default "sample" style. 
+It’s like a dictionary of different style settings. If you've ever written HTML, the style settings will look familiar. 
+For example h1 represents the style for the first level of headers. Alright, we're finally ready to give this report a title!
+"""
+report_title = Paragraph("A Complete Inventory of My Fruit", styles["h1"])
+
+"""
+Let's take a look at what this will look like. We can build the PDF now by using the build() method of our report. 
+It takes a list of Flowable elements, and generates a PDF with them.
+"""
+report.build(report_title)
