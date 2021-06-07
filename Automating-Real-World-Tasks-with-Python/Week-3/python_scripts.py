@@ -217,3 +217,31 @@ from reportlab.lib import colors
 table_style = [('GRID', (0,0), (-1,-1), 1, colors.black)]
 report_table = Table(data=table_data, style=table_style, hAlign="LEFT")
 report.build([report_title, report_table])
+
+################################
+# Adding Graphics to our PDFs  #
+################################
+
+# We’re going to need to use the Drawing Flowable class to create a Pie chart
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics.charts.piecharts import piecharts
+report_pie = Pie(width=3*inch, height=3*inch)
+
+"""
+To add data to our Pie chart, we need two separate lists: One for data, and one for labels. 
+Once more, we’re going to have to transform our fruit dictionary into a different shape. 
+For an added twist, let's sort the fruit in alphabetical order:
+"""
+report_pie.data = []
+report_pie.labels = []
+for fruit_name in sorted(fruit):
+    report_pie.data.append(fruit[fruit_name])
+    report_pie.labels.append(fruit_name)
+
+# The Pie object isn’t Flowable, but it can be placed inside of a Flowable Drawing.
+report_chart = Drawing()
+report_chart.add(report_pie)
+
+# Now, we'll add the new Drawing to the report, and see what it looks like.
+report.build([report_title, report_table, report_chart])
+
